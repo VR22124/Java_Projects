@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class ResumeBuilder {
-    public static void main(String[] args) {
+public class ResumeBuilder 
+{
+    public static void main(String[] args) 
+    {
         PersonalInformation personalInfo = new PersonalInformation();
         personalInfo.collectInformation();
 
@@ -22,12 +24,14 @@ public class ResumeBuilder {
     }
 }
 
-class PersonalInformation {
+class PersonalInformation 
+{
     private String name;
     private String email;
     private String phone;
 
-    public void collectInformation() {
+    public void collectInformation() 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your name:");
         this.name = scanner.nextLine();
@@ -39,7 +43,8 @@ class PersonalInformation {
         this.phone = scanner.nextLine();
     }
 
-    public void displayInformation() {
+    public void displayInformation() 
+    {
         System.out.println("\nPersonal Information:");
         System.out.println("Name: " + this.name);
         System.out.println("Email: " + this.email);
@@ -47,12 +52,14 @@ class PersonalInformation {
     }
 }
 
-class Education {
+class Education 
+{
     private String degree;
     private String institution;
     private int graduationYear;
 
-    public void collectInformation() {
+    public void collectInformation() 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEnter your highest degree:");
         this.degree = scanner.nextLine();
@@ -64,7 +71,8 @@ class Education {
         this.graduationYear = scanner.nextInt();
     }
 
-    public void displayInformation() {
+    public void displayInformation() 
+    {
         System.out.println("\nEducation:");
         System.out.println("Degree: " + this.degree);
         System.out.println("Institution: " + this.institution);
@@ -72,12 +80,14 @@ class Education {
     }
 }
 
-class Experience {
+class Experience 
+{
     private String jobTitle;
     private String company;
     private int yearsOfExperience;
 
-    public void collectInformation() {
+    public void collectInformation() 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEnter your job title:");
         this.jobTitle = scanner.nextLine();
@@ -89,7 +99,8 @@ class Experience {
         this.yearsOfExperience = scanner.nextInt();
     }
 
-    public void displayInformation() {
+    public void displayInformation() 
+    {
         System.out.println("\nExperience:");
         System.out.println("Job Title: " + this.jobTitle);
         System.out.println("Company: " + this.company);
@@ -100,16 +111,19 @@ class Experience {
 class Skills {
     private String[] skills;
 
-    public void collectInformation() {
+    public void collectInformation() 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nEnter your skills (comma-separated):");
         String skillsInput = scanner.nextLine();
         this.skills = skillsInput.split(",\\s*");
     }
 
-    public void displayInformation() {
+    public void displayInformation() 
+    {
         System.out.println("\nSkills:");
-        for (String skill : this.skills) {
+        for (String skill : this.skills) 
+        {
             System.out.println(skill);
         }
     }
